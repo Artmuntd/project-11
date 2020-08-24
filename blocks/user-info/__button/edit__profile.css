@@ -1,0 +1,14 @@
+.edit_profile{
+    background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  width: 38px;
+  height: 18px;
+  font-size: 30px;
+  display: block;
+  cursor: pointer;
+}
+
+.edit_profile:focus {
+  outline-color: greenyellow;
+}

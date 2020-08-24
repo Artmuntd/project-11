@@ -1,0 +1,12 @@
+.popup__content_image{
+   
+        min-height: auto;
+        padding: 0;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+
+}
+
+/* background-size: cover;
+background-position: center; */
