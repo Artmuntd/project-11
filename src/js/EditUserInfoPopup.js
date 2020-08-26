@@ -1,4 +1,4 @@
-class EditUserInfoPopup extends Popup {
+export class EditUserInfoPopup extends Popup {
   constructor(popupElement, userInfo, api) {
     super(popupElement);
     this.editUser = this.editUser.bind(this);

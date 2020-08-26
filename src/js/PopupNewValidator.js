@@ -1,4 +1,4 @@
-class PopupNewValidator extends FormValidator {
+export class PopupNewValidator extends FormValidator {
     constructor(form) {
       super(form);
     }

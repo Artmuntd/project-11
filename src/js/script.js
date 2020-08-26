@@ -1,3 +1,15 @@
+import "../css/pages";
+import AddNewCardPopup from './AddNewCardPopup';
+import Api from './API';
+import Card from './Card';
+import CardList from './CardList';
+import EditUserInfoPopup from'./EditUserInfoPopup';
+import FormValidator from'./FormValidator';
+import Popup from "./Popup";
+import PopupEditValidator from './PopupEditValidator';
+import PopupImage from './PopupImage';
+import  PopupNewValidator from './PopupNewValidator';
+import  UserInfo from './UserInfo';
 
 (function () {
 
@@ -48,24 +60,7 @@
   popupEditValidator.setEventListeners();
   popupNewValidator.setEventListeners();
 
-  /*
-    Можно лучше: лучше написать загрузку начальных данных с использованием Promise.all
-    https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
 
-    Выглядит этот код примерно так:
-      Promise.all([     //в Promise.all передаем массив промисов которые нужно выполнить
-        this.api.getUserData(),
-        this.api.getInitialCards()
-      ])    
-        .then((values)=>{    //попадаем сюда когда оба промиса будут выполнены
-          const [userData, initialCards] = values;
-          .............................
-        })
-        .catch((err)=>{     //попадаем сюда если один из промисов завершаться ошибкой
-          console.log(err);
-        })
-      
-  */
   api.getInfoUser()
     .then((data) => {
       const avatar = document.querySelector('.user-info__photo');

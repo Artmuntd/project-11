@@ -1,4 +1,4 @@
-class AddNewCardPopup extends Popup {
+export  class AddNewCardPopup extends Popup {
     constructor(popupElement, cardList, createCard) {
       super(popupElement);
       this.cardList = cardList;
@@ -44,3 +44,4 @@ class AddNewCardPopup extends Popup {
     }
   
   }
+  
