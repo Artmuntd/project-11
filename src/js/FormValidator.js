@@ -1,4 +1,4 @@
-export class FormValidator {
+ class FormValidator {
     constructor(form) {
       this.form = form;
       this.setSubmitButtonState = this.setSubmitButtonState.bind(this);

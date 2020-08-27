@@ -47,7 +47,7 @@ module.exports = {
               },
               {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[vendorr].[ext]'
+                loader: 'file-loader?name=./vendor/[vendor].[ext]'
             }
             ]
 
@@ -66,7 +66,7 @@ module.exports = {
             new HtmlWebpackPlugin({
                
                 inject: false, 
-                template: './src/index.html', 
+                template: './src/html/index.html', 
                 filename: 'index.html' 
               }),
               new WebpackMd5Hash(),
@@ -75,4 +75,4 @@ module.exports = {
             })
         ]
         
-};
+}
