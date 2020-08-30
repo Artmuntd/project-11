@@ -1,4 +1,5 @@
- class PopupEditValidator extends FormValidator {
+ import FormValidator from"../js/FormValidator";
+ export default class PopupEditValidator extends FormValidator {
     constructor(form) {
       super(form);
     }

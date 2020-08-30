@@ -15,7 +15,7 @@
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src= "<%=require('../images/logo.svg)'%>"alt="mesto logo" class="logo">
+      <img src= "<%=require('../images/logo.svg').default%>"alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -45,7 +45,7 @@
   
     <div class="popup" id="popup-new">
       <div class="popup__content">
-        <img src="<%=require('../images/close.svg')%>" alt="" class="popup__close" id='close-button'>
+        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close" id='close-button'>
 
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new" novalidate>
@@ -62,7 +62,7 @@
 
     <div class="popup" id="popup-edit">
       <div class="popup__content">
-        <img src=  "<%=require('../images/close.svg')%>" alt="" class="popup__close" id='close-button'>
+        <img src=  "<%=require('../images/close.svg').default%>" alt="" class="popup__close" id='close-button'>
 
         <h3 class="popup__title">О себе</h3>
         <form class="popup__form" name="edit" novalidate>
@@ -78,9 +78,8 @@
 
     <div class="popup" id="popup-image">
       <div class="popup__content popup__content_image">
-        <img src="<%=require('../images/close.svg')%>" class="popup__close" id='close-button'>
+        <img src="<%=require('../images/close.svg').default%>" class="popup__close" id='close-button'>
         <img src="" alt="" class="popup__image">
-
       </div>
     </div>
 

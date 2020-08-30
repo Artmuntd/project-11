@@ -1,4 +1,5 @@
- class EditUserInfoPopup extends Popup {
+import Popup from "../js/Popup";
+export default class EditUserInfoPopup extends Popup {
   constructor(popupElement, userInfo, api) {
     super(popupElement);
     this.editUser = this.editUser.bind(this);

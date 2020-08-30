@@ -23,28 +23,25 @@ module.exports = {
                 },
                 
                 {
-                    test: /\.(png|jpg|gif|ico|svg)$/,
-                    use: [
-                            'file-loader?name=../images/[image].[ext]', 
+                    test: /\.(png|jpg|gif|ico|svg)$/i,
+                    use: [  
+                         
+                            {
+                              loader: 'file-loader',
+                              options: {
+                                name: '../images/[name].[ext]',
+                              },
+                            },
+
                             {
                                     loader: 'image-webpack-loader',
                                     options: {}
                             },
                     ]
                },
-               {
-                test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [
-                  'file-loader',
-                  {
-                    loader: 'image-webpack-loader',
-                    options: {
-                      bypassOnDebug: true, 
-                      disable: true, 
-                    },
-                  },
-                ],
-              },
+
+
+              
               {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=./vendor/[vendor].[ext]'
@@ -66,8 +63,8 @@ module.exports = {
             new HtmlWebpackPlugin({
                
                 inject: false, 
-                template: './src/html/index.html', 
-                filename: 'index.html' 
+                template: './src/html/index.html',
+                filename: 'index.html'
               }),
               new WebpackMd5Hash(),
               new webpack.DefinePlugin({

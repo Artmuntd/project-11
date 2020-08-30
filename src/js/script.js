@@ -1,11 +1,20 @@
 import "../css/pages/index.css";
+import Api  from "../js/API";
+import  AddNewCardPopup from "../js/AddNewCardPopup";
+import Card from "../js/Card";
+import  CardList  from "../js/CardList";
+import EditUserInfoPopup from "../js/EditUserInfoPopup";
+import PopupEditValidator  from "../js/PopupEditValidator";
+import PopupImage from "../js/PopupImage";
+import PopupNewValidator from "../js/PopupNewValidator";
+import UserInfo from "../js/UserInfo";
 
 
 (function () {
 
 
   const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort12',
+    baseUrl: ' https://nomoreparties.co/cohort12',
     headers: {
       authorization: 'dde68826-0ccf-4c1b-a8b9-7200aa93f8eb',
       'Content-Type': 'application/json'
@@ -28,7 +37,7 @@ import "../css/pages/index.css";
   const addNewCardPopup = new AddNewCardPopup(document.querySelector("#popup-new"), cardList, createCard);
   addNewCardPopup.setEventListeners();
 
-
+  
   const userInfo = new UserInfo(document.querySelector('.user-info__name'), document.querySelector('.user-info__job'));
   const editUserInfoPopup = new EditUserInfoPopup(document.querySelector("#popup-edit"), userInfo, api);
   editUserInfoPopup.setEventListeners();
@@ -41,6 +50,8 @@ import "../css/pages/index.css";
 
   document.querySelector(".user-info__button").addEventListener('click', addNewCardPopup.open);
   document.querySelector(".edit_profile").addEventListener('click', editUserInfoPopup.open);
+
+
 
 
   const popupEditValidator = new PopupEditValidator(editUserInfoPopup.popupElement.querySelector(".popup__form"));
