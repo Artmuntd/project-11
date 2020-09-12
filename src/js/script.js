@@ -14,11 +14,7 @@ import UserInfo from "../js/UserInfo";
 
 
   const api = new Api({
-<<<<<<< HEAD
-    baseUrl: ' https://nomoreparties.co/cohort12',
-=======
     baseUrl:  process.env.NODE_ENV=='development'? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12',
->>>>>>> 24b490a6... some changes
     headers: {
       authorization: 'dde68826-0ccf-4c1b-a8b9-7200aa93f8eb',
       'Content-Type': 'application/json'
