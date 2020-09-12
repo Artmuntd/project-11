@@ -19,7 +19,7 @@ module.exports = {
                 }, 
                 {
                     test: /\.css$/i, 
-                    use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), { loader:'css-loader', options: { importLoaders: 2 } }, 'postcss-loader'] 
+                    use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] 
                 },
                 
                 {
@@ -29,7 +29,7 @@ module.exports = {
                             {
                               loader: 'file-loader',
                               options: {
-                                name: './images/[name].[ext]',
+                                name: '../images/[name].[ext]',
                               },
                             },
 
@@ -44,7 +44,7 @@ module.exports = {
               
               {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./vendor/[vendor].[ext]'
             }
             ]
 
